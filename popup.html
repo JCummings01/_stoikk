@@ -1,0 +1,49 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>New Tab</title>
+    <link rel="stylesheet" href="stoikk.css">
+    <link rel="stylesheet" href="animate.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic|Montserrat|Indie+Flower' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        /*font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;*/
+        font-size: 100%;
+        background-image: url("/assets/italy.jpg");
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+    <ul id="background">
+      <li style="opacity: 1; background-image: url('/assets/italy.jpg');">
+          <p id="message" class="fadeIn">
+            Misfortune nobly born is good fortune
+          </p>
+          <p id="author" class="fadeIn">
+            Marcus Aurelius
+          </p>
+      </li>
+    </ul>
+  </body>
+</html>
