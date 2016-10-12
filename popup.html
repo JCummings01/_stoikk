@@ -6,44 +6,25 @@
  -->
 <html>
   <head>
-    <title>New Tab</title>
+    <title>STOIKK</title>
     <link rel="stylesheet" href="stoikk.css">
     <link rel="stylesheet" href="animate.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic|Montserrat|Indie+Flower|Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
     <style>
-      body {
-        /*font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;*/
-        font-size: 100%;
-        /*background-image: url("/assets/italy.jpg");*/
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
     </style>
-
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
       - Policy documentation[1] for details and explanation.
-      -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
     <script src="jquery-3.1.0.min.js"></script>
     <script src="popup.js"></script>
   </head>
   <body>
-    <div id="status"></div>
-    <ul id="background">
-      <li style="opacity: 1; background-image: url('');">
-          <p id="message" class="fadeIn">
-
-          </p>
-          <p id="author" class="fadeIn">
-            Marcus Aurelius
-          </p>
+    <ul id="background" class="fadeIn">
+      <li class="quote-container">
+          <p id="message" class="slideInDown"></p>
+          <p id="author" class="slideInUp"></p>
       </li>
     </ul>
   </body>

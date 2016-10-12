@@ -55,37 +55,37 @@ $(document).ready(function () {
   }
 
   // GENERATE RANDOM NUMBER
-  var randomNumber = randomIntFromInterval(1, 6)
+  var randomNumber = randomIntFromInterval(0, 5)
 
   // LIST OF STOIC QUOTES
   var quoteList = [
-    {quote: 'Misfortune nobly born is good fortune', author: 'Marcus Aurelius'},
+    {quote: 'Misfortune nobly born is good fortune.', author: 'Marcus Aurelius'},
     {quote: 'Difficulties strengthen the mind, as labor does the body.', author: 'Seneca'},
     {quote: 'We are disturbed not by what happens to us, but by our thoughts about what happens.', author: 'Epictetus'},
     {quote: 'Where is the good? In the will. Where is the evil? In the will. Where is neither of them? In those things that are independent of the will.', author: 'Epictetus'},
     {quote: 'Misfortune nobly born is good fortune.', author: 'Marcus Aurelius'},
-    {quote: 'He who lives in harmony with himself lives in harmony with the universe', author: 'Marcus Aurelius'}
+    {quote: 'He who lives in harmony with himself lives in harmony with the universe.', author: 'Marcus Aurelius'}
   ]
 
   // LIST OF BACKGROUNDS
   var backgroundList = [
-    {file: '/assets/italy.jpg'},
-    {file: '/assets/rome.jpg'},
-    {file: '/assets/rome2.jpg'},
-    {file: '/assets/rome3.jpg'},
-    {file: '/assets/rome4.jpg'},
-    {file: '/assets/rome5.jpg'}
+    {file: 'assets/italy.jpg'},
+    {file: 'assets/rome.jpg'},
+    {file: 'assets/rome2.jpg'},
+    {file: 'assets/rome3.jpg'},
+    {file: 'assets/rome4.jpg'},
+    {file: 'assets/rome5.jpg'}
   ]
 
   // RANDOMLY POPULATE QUOTE, AUTHOR, & BACKGROUND
   var image = backgroundList[randomNumber]
-  // $('body').css('background-image', 'url(' + image.file + ')')
-  $('#background li').css('background-image', 'url(' + image.file + ')')
-  var quote = quoteList[randomNumber]
-  $('#message').html(quote.quote)
-  $('#author').html(quote.author)
+  $('#background').css('background-image', 'url(' + image.file + ')')
+  setTimeout(function () {
+    var quote = quoteList[randomNumber]
+    $('#message').html(quote.quote)
+    $('#author').html(quote.author)
+  }, 1000)
 
-  // PRINT CURRENT QUOTE
+  // PRINT CURRENT RANDOM NUMBER
   console.log(randomNumber)
-
 })
