@@ -84,7 +84,7 @@ $(document).ready(function () {
     var quote = quoteList[randomNumber]
     $('#message').html(quote.quote)
     $('#author').html(quote.author)
-  }, 1000)
+  }, 1250)
 
   // PRINT CURRENT RANDOM NUMBER
   console.log(randomNumber)
