@@ -64,7 +64,9 @@ $(document).ready(function () {
     {quote: 'We are disturbed not by what happens to us, but by our thoughts about what happens.', author: 'Epictetus'},
     {quote: 'Where is the good? In the will. Where is the evil? In the will. Where is neither of them? In those things that are independent of the will.', author: 'Epictetus'},
     {quote: 'Misfortune nobly born is good fortune.', author: 'Marcus Aurelius'},
-    {quote: 'He who lives in harmony with himself lives in harmony with the universe.', author: 'Marcus Aurelius'}
+    {quote: 'He who lives in harmony with himself lives in harmony with the universe.', author: 'Marcus Aurelius'},
+    {quote: 'No man is free who is not master of himself.', author: 'Epictetus'},
+    {quote: 'Man is affected, not by events, but by the view he takes of them.', author: 'Epictetus'}
   ]
 
   // LIST OF BACKGROUNDS
