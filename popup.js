@@ -55,7 +55,7 @@ $(document).ready(function () {
   }
 
   // GENERATE RANDOM NUMBER
-  var randomNumber = randomIntFromInterval(0, 5)
+  var randomNumber = randomIntFromInterval(0, 11)
 
   // LIST OF STOIC QUOTES
   var quoteList = [
@@ -66,6 +66,10 @@ $(document).ready(function () {
     {quote: 'Misfortune nobly born is good fortune.', author: 'Marcus Aurelius'},
     {quote: 'He who lives in harmony with himself lives in harmony with the universe.', author: 'Marcus Aurelius'},
     {quote: 'No man is free who is not master of himself.', author: 'Epictetus'},
+    {quote: 'Cultivate these, then, for they are wholly within your power: sincerity, dignity, industriousness, sobriety.', author: 'Marcus Aurelius'},
+    {quote: "For the passing minute is every man's equal possession, but what has once gone by is not ours.", author: 'Marcus Aurelius'},
+    {quote: "Concentrate every minute on doing what's in front of you with precise and genuine seriousness, tenderly, willingly, with justice.", author: 'Marcus Aurelius'},
+    {quote: 'Actions performed through anger are less detestable than actions performed through lust. A man acting through anger most likely has an external force causing the action. A man acting through lust is simply seeking pleasure and his actions are purely his own.', author: 'Marcus Aurelius'},
     {quote: 'Man is affected, not by events, but by the view he takes of them.', author: 'Epictetus'}
   ]
 
@@ -74,9 +78,15 @@ $(document).ready(function () {
     {file: 'assets/italy.jpg'},
     {file: 'assets/rome.jpg'},
     {file: 'assets/rome2.jpg'},
-    {file: 'assets/rome3.jpg'},
     {file: 'assets/rome4.jpg'},
-    {file: 'assets/rome5.jpg'}
+    {file: 'assets/rome5.jpg'},
+    {file: 'assets/italy2.jpg'},
+    {file: 'assets/italy2.jpg'},
+    {file: 'assets/italy3.jpg'},
+    {file: 'assets/italy3.jpg'},
+    {file: 'assets/italy4.jpg'},
+    {file: 'assets/italy4.jpg'},
+    {file: 'assets/italy5.jpg'}
   ]
 
   // RANDOMLY POPULATE QUOTE, AUTHOR, & BACKGROUND
@@ -87,7 +97,4 @@ $(document).ready(function () {
     $('#message').html(quote.quote)
     $('#author').html(quote.author)
   }, 1250)
-
-  // PRINT CURRENT RANDOM NUMBER
-  console.log(randomNumber)
 })
