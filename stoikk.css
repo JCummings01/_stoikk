@@ -56,12 +56,13 @@ p {
 
 #message {
   font-size: 4em;
-  padding-top: 2em;
+  padding-bottom: 2em;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 200;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-  word-spacing: -3px;
+  margin: auto;
+  word-spacing: -1px;
   letter-spacing: -2px;
   animation-delay: 1s;
   animation-duration: 2s;
