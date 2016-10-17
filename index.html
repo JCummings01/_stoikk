@@ -1,0 +1,32 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>New Tab</title>
+    <link rel="stylesheet" href="stoikk.css">
+    <link rel="stylesheet" href="animate.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic|Josefin+Slab|Amatic+SC|Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
+    <style>
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <ul id="background" class="fadeIn">
+      <p id="logo" class="darkgrey fadeIn">//STOIKK</p>
+      <li class="quote-container">
+          <p id="message" class="slideInDown white"></p>
+          <p id="author" class="slideInUp darkgrey"></p>
+      </li>
+    </ul>
+  </body>
+</html>
