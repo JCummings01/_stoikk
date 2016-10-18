@@ -31,6 +31,14 @@ body {
   animation-iteration-count: 1;
 }
 
+.chromebadge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
 li {
   padding: 0 4em;
   background-color: rgba(0,0,0,0.5);
