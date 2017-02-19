@@ -2,7 +2,7 @@ body {
   overflow: hidden;
   font-size: 100%;
   background: #333;
-  color: #fff;
+  color: #fff !important;
   text-shadow: 0px 0px 25px rgba(0,0,0,0.3);
 }
 
@@ -29,6 +29,14 @@ body {
   padding: 0;
   animation-duration: 2s;
   animation-iteration-count: 1;
+}
+
+.chromebadge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 16px;
+    margin-bottom: 16px;
 }
 
 li {
@@ -64,7 +72,7 @@ p {
   margin: auto;
   word-spacing: -1px;
   letter-spacing: -2px;
-  animation-delay: 1s;
+  animation-delay: 1.25s;
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
@@ -81,9 +89,75 @@ p {
   font-weight: 700;
   letter-spacing: 3px;
   word-spacing: 3px;
-  animation-delay: 1s;
+  animation-delay: 1.25s;
   animation-duration: 2s;
   animation-iteration-count: 1;
+}
+
+#tweet {
+  position: relative;
+  /*margin-bottom: 10px;*/
+  /*margin-left: 1em;*/
+}
+#tweet:hover {
+  color: rgb(0, 172, 237);
+  /*text-shadow: 2px 2px 2px rgba(255,255,255,1);*/
+  cursor: pointer;
+}
+
+#fb {
+  position: relative;
+  /*bottom: 10px;*/
+  /*left: 2em;*/
+}
+#fb:hover {
+  color: rgb(59, 89, 152);
+  /*text-shadow: 2px 4px 10px rgba(255,255,255,1);*/
+  cursor: pointer;
+}
+
+#share {
+  position: absolute;
+  bottom: 10px;
+  left: 1em;
+  width: 140px;
+  display: flex;
+  height: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 20% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #ccc;
+	/*background: -moz-linear-gradient(#fff, #999);*/
+	/*background: -webkit-linear-gradient(#fff, #999);*/
+	/*background: -o-linear-gradient(#fff, #999);*/
 }
 
 /* HELPER CLASSES */

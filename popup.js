@@ -96,5 +96,23 @@ $(document).ready(function () {
     var quote = quoteList[randomNumber]
     $('#message').html(quote.quote)
     $('#author').html(quote.author)
-  }, 1250)
+  }, 1250) 
+
+  //TWEET QUOTE FUNCTIONALITY
+  setTimeout(function () {
+    var msg = $('#message').html();
+    var author = $('#author').html();
+    var url = "https://twitter.com/intent/tweet?text=" + '%22' + encodeURIComponent(msg) + '%22%20' + encodeURIComponent(author) + '%20%23stoikk'
+    $("#tweetLink").attr("href", url)
+    console.log(url);
+  }, 1250);
+
+  $('#fbLink').click(function(){
+    FB.ui({
+      method: 'feed',
+      link: 'https://developers.facebook.com/docs/',
+      caption: 'An example caption',
+    }, function(response){});
+  });
+   
 })
