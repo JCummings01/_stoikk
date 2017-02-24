@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Stoikk",
   "description": "An extension that provides users with Stoic philosophy quotes on new tabs",
   "version": "0.0.0.3",
