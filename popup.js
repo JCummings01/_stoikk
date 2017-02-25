@@ -21,18 +21,18 @@ $(document).ready(function () {
   function load_options() {
     chrome.storage.sync.get(
       null, function(items) {
-      console.log('storage work?',items)
+      // console.log('storage work?',items)
       if (items.authorAnimation == false) {
         document.getElementById('author').style.animationDuration="1s";
         $('#author').removeClass('slideInUp');
-        $('#author').addClass('fadeIn');
+        // $('#author').addClass('fadeIn');
       } else {
         $('#author').addClass('slideInUp');
       };
       if (items.quoteAnimation == false) {
         document.getElementById('message').style.animationDuration="1s";
         $('#message').removeClass('slideInDown');
-        $('#message').addClass('fadeIn');
+        // $('#message').addClass('fadeIn');
       } else {
         $('#message').addClass('slideInDown');
       };
@@ -95,7 +95,7 @@ $(document).ready(function () {
     var author = $('#author').html();
     var url = "https://twitter.com/intent/tweet?text=" + '%22' + encodeURIComponent(msg) + '%22%20' + encodeURIComponent(author) + '%20%23stoikk'
     $("#tweetLink").attr("href", url)
-    console.log(url);
+    // console.log(url);
   }, 1250);
    
 })
