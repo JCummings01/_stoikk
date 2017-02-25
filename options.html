@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stoikk Options</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-blue.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="stoikk.css">
+        <script src="jquery-3.1.0.min.js"></script>
+        <script src="material.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container-fluid button-box">
+            <div class="">Quote Animation: <span class="quote-on">On</span><span class="quote-off">Off</span></div>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+                <span class="mdl-switch__label"></span>
+            </label>
+        </div>
+        <div class="container-fluid button-box">
+            <div class="">Author Animation: <span class="author-on">On</span><span class="author-off">Off</div>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+                <input type="checkbox" id="switch-2" class="mdl-switch__input" checked>
+                <span class="mdl-switch__label"></span>
+            </label>
+        </div>
+        <div class="container-fluid save-box">
+            <button id="save" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Save
+            </button>
+        </div>
+        <div id="status"></div>
+        <!--Favorite color:
+        <select id="color">
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+        </select>
+
+        <label>
+        <input type="checkbox" id="like">
+        I like colors.
+        </label>-->
+
+       
+
+        <script src="options.js"></script>
+    </body>
+</html>
