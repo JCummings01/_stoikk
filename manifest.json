@@ -7,6 +7,10 @@
   "chrome_url_overrides": {
     "newtab": "popup.html"
   },
+  "content_scripts": [{
+    "js": ["activate-ga.js"]
+  }]
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "options_page": "options.html",
   "permissions": [
     "storage",
