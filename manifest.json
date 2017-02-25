@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Stoikk",
   "description": "An extension that provides users with Stoic philosophy quotes on new tabs",
-  "version": "0.0.0.5",
+  "version": "0.0.0.6",
   "author": "James Cummings - Wash Park Web Development",
   "chrome_url_overrides": {
     "newtab": "popup.html"
