@@ -466,12 +466,14 @@ p {
   background-size: contain;
   height: 20px;
   width: 20px;
+  animation-name: text-focus-in;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
 }
 
 #tweet:hover {
   color: rgb(0, 172, 237);
   cursor: pointer;
-  animation-duration: 1s;
 }
 
 #fb {
