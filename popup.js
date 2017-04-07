@@ -28,27 +28,27 @@ function getCurrentTabUrl (callback) {
 
 $(document).ready(function () {
   // LOAD OPTIONS SETTINGS
-  function load_options() {
-    chrome.storage.sync.get(
-      null, function(items) {
-      // console.log('storage work?',items)
-      if (items.authorAnimation == false) {
-        document.getElementById('author').style.animationDuration="1s";
-        $('#author').removeClass('slideInUp');
-        // $('#author').addClass('fadeIn');
-      } else {
-        $('#author').addClass('slideInUp');
-      };
-      if (items.quoteAnimation == false) {
-        document.getElementById('message').style.animationDuration="1s";
-        $('#message').removeClass('slideInDown');
-        // $('#message').addClass('fadeIn');
-      } else {
-        $('#message').addClass('slideInDown');
-      };
-    });
-  }
-  load_options();
+  // function load_options() {
+  //   chrome.storage.sync.get(
+  //     null, function(items) {
+  //     if (items.authorAnimation == false) {
+  //       document.getElementById('author').style.animationDuration="1s";
+  //       $('#author').removeClass('slideInUp');
+  //       $('#author').addClass('fadeIn');
+  //     } else {
+  //       $('#author').addClass('slideInUp');
+  //     };
+  //     if (items.quoteAnimation == false) {
+  //       document.getElementById('message').style.animationDuration="1s";
+
+  //       // $('#message').addClass('fadeIn');
+  //   } else {
+  //       $('#message').removeClass('slideInDown');
+  //       $('#message').addClass('slideInDown');
+  //     };
+  //   });
+  // }
+  // load_options();
 
   // RANDOM NUMBER FUNCTION
   function randomIntFromInterval (min, max) {
@@ -97,7 +97,7 @@ $(document).ready(function () {
     var quote = quoteList[randomNumber]
     $('#message').html(quote.quote)
     $('#author').html(quote.author)
-  }, 1250) 
+  }, 750) 
 
   //TWEET QUOTE FUNCTIONALITY
   setTimeout(function () {
@@ -106,6 +106,6 @@ $(document).ready(function () {
     var url = "https://twitter.com/intent/tweet?text=" + '%22' + encodeURIComponent(msg) + '%22%20' + encodeURIComponent(author) + '%20%23stoikk'
     $("#tweetLink").attr("href", url)
     // console.log(url);
-  }, 1250);
+  }, 250);
    
 })

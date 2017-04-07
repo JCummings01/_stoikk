@@ -15,15 +15,21 @@
             <div class="">Quote Animation: <span class="quote-on">On</span><span class="quote-off">Off</span></div>
             <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
                 <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+                <input type="checkbox" id="switch-1off" class="mdl-switch__input">
                 <span class="mdl-switch__label"></span>
             </label>
         </div>
         <div class="container-fluid button-box">
             <div class="">Author Animation: <span class="author-on">On</span><span class="author-off">Off</div>
-            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+            <label id="author" class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
                 <input type="checkbox" id="switch-2" class="mdl-switch__input" checked>
                 <span class="mdl-switch__label"></span>
             </label>
+            <label id="noAuthor" class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2off">
+                <input type="checkbox" id="switch-2off" class="mdl-switch__input">
+                <span class="mdl-switch__label"></span>
+            </label>
+
         </div>
         <div class="container-fluid save-box">
             <button id="save" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
@@ -31,20 +37,6 @@
             </button>
         </div>
         <div id="status"></div>
-        <!--Favorite color:
-        <select id="color">
-        <option value="red">red</option>
-        <option value="green">green</option>
-        <option value="blue">blue</option>
-        <option value="yellow">yellow</option>
-        </select>
-
-        <label>
-        <input type="checkbox" id="like">
-        I like colors.
-        </label>-->
-
-       
 
         <script src="options.js"></script>
     </body>

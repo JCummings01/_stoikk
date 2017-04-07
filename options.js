@@ -1,5 +1,29 @@
 $(document).ready(function () {
     // Options status
+    // function load_options() {
+        chrome.storage.sync.get(
+          null, function(items) {
+            console.log('storage work?',items)
+            if (items.authorAnimation == false) {
+                $('#noAuthor').show();
+                $('#author').hide();
+            } else {
+                $('#author').show();
+                $('#noAuthor').hide();
+            };
+            if (items.quoteAnimation == false) {
+                $('#switch-1off').show();
+                $('#switch-1').hide();
+            } else {
+                $('#switch-1').show();
+                $('#switch-1off').hide();
+            };
+        });
+    // }
+    // load_options();
+ 
+
+    // Options switches
     function checkSwitch1() {
         if ( $('#switch-1:checked').length>0 ) {
             $('.quote-off').hide();
@@ -18,8 +42,8 @@ $(document).ready(function () {
             $('.author-off').show();
         }
     }
-    checkSwitch1();
-    checkSwitch2();
+    // checkSwitch1();
+    // checkSwitch2();
 
     // Options switches
     $('#switch-1').click(function(){
@@ -33,6 +57,8 @@ $(document).ready(function () {
     function save_options() {
         var quoteState = $('#switch-1:checked').length>0
         var authorState = $('#switch-2:checked').length>0
+        console.log('quoteState', quoteState)
+        console.log('authorState', authorState)
         chrome.storage.sync.set({
             'quoteAnimation': quoteState,
             'authorAnimation': authorState
