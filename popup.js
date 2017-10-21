@@ -1,7 +1,3 @@
-// Copyright (c) 2014 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 // var _gaq = _gaq || [];
 // _gaq.push(['_setAccount', 'UA-85882120-1']);
 // _gaq.push(['_trackPageview']);
@@ -53,10 +49,7 @@ $(document).ready(function () {
   // RANDOM NUMBER FUNCTION
   function randomIntFromInterval (min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
-  }
-
-  // GENERATE RANDOM NUMBER
-  var randomNumber = randomIntFromInterval(0, 11)
+  };
 
   // LIST OF STOIC QUOTES
   var quoteList = [
@@ -71,8 +64,21 @@ $(document).ready(function () {
     {quote: "For the passing minute is every man's equal possession, but what has once gone by is not ours.", author: 'Marcus Aurelius'},
     {quote: "Concentrate every minute on doing what's in front of you with precise and genuine seriousness, tenderly, willingly, with justice.", author: 'Marcus Aurelius'},
     {quote: 'Actions performed through anger are less detestable than actions performed through lust. A man acting through anger most likely has an external force causing the action. A man acting through lust is simply seeking pleasure and his actions are purely his own.', author: 'Marcus Aurelius'},
-    {quote: 'Man is affected, not by events, but by the view he takes of them.', author: 'Epictetus'}
-  ]
+    {quote: 'Man is affected, not by events, but by the view he takes of them.', author: 'Epictetus'},
+    {quote: 'We are more often frightened than hurt; and we suffer more from imagination than from reality.', author: 'Seneca'},
+    {quote: 'A ship should not ride on a single anchor, nor life on a single hope.', author: 'Epictetus'},
+    {quote: 'You don`t have to turn this into something. It doesn`t have to upset you.', author: 'Marcus Aurelius'},
+    {quote: 'The nearer a man comes to a calm mind, the closer he is to strength.', author: 'Marcus Aurelius'},
+    {quote: 'Never let the future disturb you. You will meet it, if you have to, with the same weapons of reason which today arm you against the present.', author: 'Marcus Aurelius'},
+    {quote: 'You have power over your mind - not outside events. Realize this, and you will find strength', author: 'Marcus Aurelius'},
+    {quote: 'The man who has anticipated the coming of troubles takes away their power when they arrive.', author: 'Seneca'},
+    {quote: 'First say to yourself what you would be; and then do what you have to do.', author: 'Epictetus'},
+    {quote: 'The whole future lies in uncertainty: live immediately.', author: 'Seneca'},
+    {quote: 'To accept without arrogance, to let go with indifference.', author: 'Marcus Aurelius'},
+    {quote: 'You could leave life right now. Let that determine what you do and say and think.', author: 'Marcus Aurelius'},
+    {quote: 'To bear trials with a calm mind robs misfortune of its strength and burden.', author: 'Seneca'},
+    {quote: 'Meditate often on the interconnectedness and mutual interdependence of all things in the universe.', author: 'Marcus Aurelius'},
+  ];
 
   // LIST OF BACKGROUNDS
   var backgroundList = [
@@ -88,24 +94,39 @@ $(document).ready(function () {
     {file: 'assets/italy4.jpg'},
     {file: 'assets/italy4.jpg'},
     {file: 'assets/italy5.jpg'}
-  ]
+  ];
+
+  // GENERATE RANDOM NUMBER
+  var quoteListLength = quoteList.length;  
+  var randomQuoteNumber = randomIntFromInterval(0, quoteListLength-1);
+  var backgroundListLength = backgroundList.length;
+  var randomBackgroundNumber = randomIntFromInterval(0, backgroundListLength-1);
 
   // RANDOMLY POPULATE QUOTE, AUTHOR, & BACKGROUND
-  var image = backgroundList[randomNumber]
-  $('#background').css('background-image', 'url(' + image.file + ')')
+  var image = backgroundList[randomBackgroundNumber];
+  var background = document.getElementById('background');
+  var imageUrl = 'url(' + image.file + ')';
+  background.style.backgroundImage = imageUrl;
   setTimeout(function () {
-    var quote = quoteList[randomNumber]
-    $('#message').html(quote.quote)
-    $('#author').html(quote.author)
-  }, 750) 
+    var quote = quoteList[randomQuoteNumber]
+    var msg = document.getElementById('message');
+    var author = document.getElementById('author');
+    var spacer = document.getElementById('spacer');
+    msg.innerHTML = quote.quote;
+    author.innerHTML = quote.author;  
+    spacer.style.width = '40px';
+    spacer.style.opacity = '1';
+  }, 250) ;
 
   //TWEET QUOTE FUNCTIONALITY
   setTimeout(function () {
-    var msg = $('#message').html();
-    var author = $('#author').html();
-    var url = "https://twitter.com/intent/tweet?text=" + '%22' + encodeURIComponent(msg) + '%22%20' + encodeURIComponent(author) + '%20%23stoikk'
-    $("#tweetLink").attr("href", url)
-    // console.log(url);
-  }, 250);
+    var msg = document.getElementById('message');
+    var author = document.getElementById('author');
+    var currentMsg = msg.innerHTML;
+    var currentAuthor = author.innerHTML;    
+    var url = 'https://twitter.com/intent/tweet?text=' + '%22' + encodeURIComponent(msg) + '%22%20' + encodeURIComponent(author) + '%20%23stoikk'
+    var tweetLink = document.getElementById('tweetLink');
+    tweetLink.href = url;
+  }, 400);
    
-})
+});
