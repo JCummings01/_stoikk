@@ -118,15 +118,29 @@ $(document).ready(function () {
     spacer.style.opacity = '1';
   }, 250) ;
 
-  //TWEET QUOTE FUNCTIONALITY
+  // TWEET QUOTE FUNCTIONALITY
   setTimeout(function () {
     var msg = document.getElementById('message');
     var author = document.getElementById('author');
     var currentMsg = msg.innerHTML;
     var currentAuthor = author.innerHTML;    
-    var url = 'https://twitter.com/intent/tweet?text=' + '%22' + encodeURIComponent(msg) + '%22%20' + encodeURIComponent(author) + '%20%23stoikk'
+    var url = 'https://twitter.com/intent/tweet?text=' + '%22' + encodeURIComponent(currentMsg) + '%22%20' + encodeURIComponent(currentAuthor) + '%20%23stoikk'
     var tweetLink = document.getElementById('tweetLink');
     tweetLink.href = url;
   }, 400);
-   
+
+  // TWEET HOVER EFFECT
+  $('#tweetLink').hover(function(){
+    $('#message').addClass('text-border');
+    // $('#author').addClass('invisible');
+    $('.quote-container').addClass('white-background');
+    $('#author').addClass('darkgrey');
+    $('#spacer').addClass('shrink');
+  },function() {
+    $('#message').removeClass('text-border');
+    // $('#author').removeClass('invisible');
+    $('.quote-container').removeClass('white-background');
+    $('#author').removeClass('darkgrey');
+    $('#spacer').removeClass('shrink');    
+  });
 });

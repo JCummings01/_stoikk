@@ -383,6 +383,8 @@ body {
   animation-name: fade-in;
   animation-duration: 1s;
   animation-iteration-count: 1;
+  transition: all 1s ease;
+  /* opacity: 1; */
 }
 
 .chromebadge {
@@ -422,7 +424,7 @@ p {
 
 #message {
   font-size: 3em;
-  padding-bottom: 2em;
+  border: 1px solid transparent;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 100;
@@ -433,6 +435,9 @@ p {
   animation-name: text-focus-in;
   animation-duration: 2s;
   animation-iteration-count: 1;
+  transition: all 1s ease;
+  padding: 10px 20px 20px 20px;
+  /* margin-bottom: 2em; */
 }
 
 #author {
@@ -445,6 +450,7 @@ p {
   font-weight: 400;
   letter-spacing: 5px;
   word-spacing: 3px;
+  transition: all 1s ease;
   animation-name: text-focus-in;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -523,10 +529,40 @@ p {
   transition: all 1.75s ease;
 }
 
+.quote-container {
+  transition: all 1s ease;
+}
+
 /* HELPER CLASSES */
 .darkgrey {
   opacity: 0.50;
 }
 .white {
   color: white;
+}
+.darkgrey {
+  color: rgba(0,0,0,0.95) !important;
+  text-shadow: rgba(0,0,0,0) !important;
+  bottom: 90px !important;
+  transition: all 1s ease;
+}
+.text-border {
+  border-color: #e6ecf0 !important;
+  transition: all 1s ease;
+  resize: both;  
+  overflow: hidden;
+  color:rgba(0,0,0,0.95) !important;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0) !important;
+  border-radius: 3px;
+}
+.invisible {
+  opacity: 0 !important;
+}
+.shrink {
+  width: 0 !important;
+  transition: all 1s ease;
+}
+.white-background {
+  background: white !important;
+  transition: all 1s ease;  
 }
