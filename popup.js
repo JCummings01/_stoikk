@@ -190,7 +190,7 @@ $(document).ready(function () {
     var currentMsg = msg.innerHTML;
     var currentAuthor = author.innerHTML;  
     var sanitizedQuote = currentMsg.split('<br>').join('');
-    var url = "https://twitter.com/intent/tweet?text=" + "%22" + encodeURIComponent(currentMsg) + "%22%20" + encodeURIComponent(currentAuthor) + "%20%23stoikk"
+    var url = "https://twitter.com/intent/tweet?text=" + "%22" + encodeURIComponent(sanitizedQuote) + "%22%20" + encodeURIComponent(currentAuthor) + "%20%23stoikk"
     var tweetLink = document.getElementById("tweetLink");
     tweetLink.href = url;
   }, 400);
